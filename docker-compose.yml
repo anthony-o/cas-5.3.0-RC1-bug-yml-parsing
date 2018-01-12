@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  cas_bug:
+    container_name: cas_bug
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+      args:
+        - USER_UID=$USER_UID
+    image: bs_cas
+    volumes:
+      - $HOME/.m2:/home/user/.m2
+      - ./etc/cas:/etc/cas
+    ports:
+      - "8444:8444"
+      - "5005:5005"

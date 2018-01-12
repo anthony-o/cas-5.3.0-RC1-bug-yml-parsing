@@ -1,0 +1,5 @@
+info:
+  description: CAS Configuration
+
+server:
+  port: 8444
